@@ -1,12 +1,12 @@
-const React = require('react');
+const React = require("react");
 
-const Layout = require('./Layout');
+const Layout = require("./Layout");
 
 module.exports = function Login({ categories }) {
   const metaTags = {
-    title: 'Вход для администратора',
-    description: 'Только для сотрудников ООО Инмарко Плюс',
-    robots: 'noindex, nofollow',
+    title: "Вход для администратора",
+    description: "Только для сотрудников ООО ПАН компани",
+    robots: "noindex, nofollow",
   };
   return (
     <Layout categories={categories} metatags={metaTags}>

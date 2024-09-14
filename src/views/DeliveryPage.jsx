@@ -1,19 +1,18 @@
-const React = require('react');
+const React = require("react");
 
-const Layout = require('./Layout');
+const Layout = require("./Layout");
 
 module.exports = function Delivery({ categories, deliveries, email }) {
   const metaTags = {
-    title: 'Доставка [ 🥗 соленья и салаты ]',
-    description:
-      '🚌Виды, 💰стоимость, 🌎регионы и 🎁условия доставки наших вкусных салатов и солений',
-    robots: 'index, follow',
+    title: "Доставка [ 🥩 Свежее качественное мясо ]",
+    description: "🚌Виды, 💰стоимость, 🌎регионы и 🎁условия доставки",
+    robots: "index, follow",
   };
   return (
     <Layout categories={categories} email={email} metatags={metaTags}>
       <script defer src="/js/delivery.js" />
       <link rel="stylesheet" href="/css/delivery.css" />
-      <link rel="canonical" href="https://soleniya.online/delivery" />
+      <link rel="canonical" href="https://premiumbeef.ru/delivery" />
       <div className="delivery-container">
         <h2 className="delivery-title">Доставка нашей продукции</h2>
         <div className="delivery-inner">
@@ -25,11 +24,10 @@ module.exports = function Delivery({ categories, deliveries, email }) {
               МО.
             </p>
             <p>
-              Обращаясь в компанию &quot;Инмарко Плюс&quot;, Вы сможете
-              размещать заказы на любые виды виды солений и салатов,
-              представленные в нашем каталоге. При размещении заказа наши
-              менеджеры свяжутся с Вами для консультации и ответят на все
-              интересующие Вас вопросы.
+              Обращаясь в ООО &quot;ПАН компани&quot;, Вы сможете размещать
+              заказы на любые виды виды мяса, представленного в нашем каталоге.
+              При размещении заказа наши менеджеры свяжутся с Вами для
+              консультации и ответят на все интересующие Вас вопросы.
             </p>
           </div>
 
@@ -67,7 +65,7 @@ module.exports = function Delivery({ categories, deliveries, email }) {
             <table
               id="delivery_table"
               className="table"
-              style={{ border: '2px solid black' }}
+              style={{ border: "2px solid black" }}
             >
               {email ? (
                 <thead>
@@ -93,12 +91,12 @@ module.exports = function Delivery({ categories, deliveries, email }) {
                       <tr
                         id={`tr-${el.id}`}
                         key={`dlvr-${el.id}`}
-                        style={{ fontSize: '12px' }}
+                        style={{ fontSize: "12px" }}
                       >
                         <td>{el.order_price}</td>
                         <td>{el.delivery_price}</td>
                         <td>
-                          {' '}
+                          {" "}
                           <button
                             type="button"
                             className="btn usual-btn"
@@ -127,10 +125,7 @@ module.exports = function Delivery({ categories, deliveries, email }) {
                       </tr>
                     ))
                   ) : (
-                    <tr>
-                      {/* <td></td>
-                      <td></td> */}
-                    </tr>
+                    <tr></tr>
                   )}
                 </tbody>
               )}
@@ -138,7 +133,7 @@ module.exports = function Delivery({ categories, deliveries, email }) {
 
             <div>
               <p className="newFeedback" />
-              <form id="deliveryForm" style={{ display: 'none' }}>
+              <form id="deliveryForm" style={{ display: "none" }}>
                 <div className="mb-3">
                   <label htmlFor="exampleInputPassword1" className="form-label">
                     Cтоимость заказа

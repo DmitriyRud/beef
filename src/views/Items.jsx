@@ -1,29 +1,29 @@
 /* eslint-disable camelcase */
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
 
 module.exports = function Items({ categories, email, items, category_id }) {
   const categoryObj = categories.filter((e) => e.id === Number(category_id))[0];
   const categoryId = categoryObj ? categoryObj.id : -1;
   const pageTitle =
     categoryId && categoryObj
-      ? `${categoryObj.title} [ Чиполинарий ]`
-      : 'Каталог продукции [ Чиполинарий ]';
+      ? `${categoryObj.title} [ Premium Beef ]`
+      : "Каталог продукции [ Premium Beef ]";
   let descriptionStr = items.map((el) => `✅${el.name}`);
   if (categoryId === -1) {
     descriptionStr = descriptionStr.sort(() => Math.random() - 0.5);
   }
-  descriptionStr = descriptionStr.join(', ');
+  descriptionStr = descriptionStr.join(", ");
 
   while (descriptionStr.length > 150) {
-    const lastInd = descriptionStr.lastIndexOf(', ');
+    const lastInd = descriptionStr.lastIndexOf(", ");
     descriptionStr = `${descriptionStr.slice(0, lastInd)} ...`;
   }
 
   const metaTags = {
     title: pageTitle,
     description: descriptionStr,
-    robots: 'index, follow',
+    robots: "index, follow",
   };
   return (
     <Layout categories={categories} email={email} metatags={metaTags}>
@@ -35,7 +35,7 @@ module.exports = function Items({ categories, email, items, category_id }) {
         href={
           Number(category_id) >= 0
             ? `https://soleniya.online/catalog/${category_id}`
-            : 'https://soleniya.online/catalog/items'
+            : "https://soleniya.online/catalog/items"
         }
       />
       <div className="container item-container">
@@ -63,7 +63,7 @@ module.exports = function Items({ categories, email, items, category_id }) {
                       {item.name}
                     </h5>
                     <div className="card-text" id={`card-text-${item.id}`}>
-                      {item.description.split('\n').map((line, index) => (
+                      {item.description.split("\n").map((line, index) => (
                         <p key={`${item.id}line${index}`}>{line}</p>
                       ))}
                     </div>
@@ -102,10 +102,10 @@ module.exports = function Items({ categories, email, items, category_id }) {
                 <div>
                   <div
                     className="hide_container_form"
-                    style={{ display: 'none' }}
+                    style={{ display: "none" }}
                     id={`hide-form-${item.id}`}
                   >
-                    <p style={{ color: 'red' }} className="alert_items" />
+                    <p style={{ color: "red" }} className="alert_items" />
                     <form
                       id={`editItem-${item.id}`}
                       encType="multipart/form-data"

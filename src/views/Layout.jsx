@@ -1,13 +1,13 @@
-const React = require('react');
+const React = require("react");
 
 module.exports = function Layout({
   children,
   categories,
   metatags = {
-    title: 'Чиполинарий',
+    title: "Премиальное мясо",
     description:
-      'Производство и снабжение соленьями и салатами магазинов, ресторанов, кафе, гостиниц, столовых, баров, комбинатов питания',
-    robots: 'index, follow',
+      "Производство и снабжение свежим качественным мясом магазинов, ресторанов, кафе, гостиниц, столовых, баров, комбинатов питания",
+    robots: "index, follow",
   },
 }) {
   return (
@@ -21,10 +21,6 @@ module.exports = function Layout({
         <meta name="robots" content={metatags.robots} />
         <meta name="rating" content="safe for kids" />
         <meta name="author" content="Dmitriy Rudakov" />
-        <meta
-          name="google-site-verification"
-          content="D1ujA9t6wjA2ytykliC-5kX2x2CDH-CahwYAQsm5clM"
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
@@ -94,14 +90,11 @@ module.exports = function Layout({
                 </ul>
               </div>
               <div className="contact_header">
-                <a href="tel:+74957951054" className="phone_link">
-                  <p className="contact_header__text">📞 +7(495)7951054</p>
-                </a>
                 <a href="tel:+79854723376" className="phone_link">
                   <p className="contact_header__text">📞 +7(985)4723376</p>
                 </a>
                 <a href="https://wa.me/79854723376" className="whatsapp_link">
-                  <img src="/image/whatsapp24.png" alt="whatsapp" />
+                  <img src="/image/whatsapp24.png" alt="whatsapp" />{" "}
                   +7(985)4723376
                 </a>
                 <a
@@ -150,11 +143,6 @@ module.exports = function Layout({
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/prices">
-                          Наши цены
-                        </a>
-                      </li>
-                      <li className="nav-item">
                         <a className="nav-link" href="/delivery">
                           Доставка
                         </a>
@@ -182,7 +170,7 @@ module.exports = function Layout({
                 <div className="dialogPriceForm">
                   <div className="closeModalContainer">
                     <button type="button" className="closeModalWindow">
-                      {' '}
+                      {" "}
                       &times;
                     </button>
                   </div>
@@ -227,8 +215,6 @@ module.exports = function Layout({
               </div>
             </form>
           </dialog>
-
-          {/* <script src="https://smtpjs.com/v3/smtp.js" /> */}
         </header>
         <div className="mainContainer">{children}</div>
         <footer>

@@ -1,8 +1,8 @@
 :root {
   --primary-color: #656e49a7;
-  --color-form-text: #fcf4ee;
+  --color-form-text: #fce7ae;
   --color-chipollino: #edb282;
-  --color-text: black;
+  --color-text: #fce7ae;
   --color-dark-green: #a2ac86;
 
   --color-button: white;
@@ -11,16 +11,19 @@
 * {
   box-sizing: border-box;
   color: var(--color-text);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
+body {
+  background-color: #0c0c0c;
+}
 .mainContainer {
-  background-color: #dadece;
+  background: transparent;
 }
 
 header,
 footer {
-  background-color: #fff;
+  background: transparent;
 }
 
 .mainContainer {
@@ -41,7 +44,7 @@ footer {
 
 .flex_up {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   border-bottom: 2px solid var(--color-dark-green);
   padding-bottom: 2rem;
@@ -57,7 +60,15 @@ footer {
 }
 
 .logo {
-  width: 20%;
+  width: 21%;
+  position: absolute;
+  top: 3%;
+  left: 8%;
+  z-index: 2;
+}
+
+.supplies {
+  min-width: 35%;
 }
 
 .contact_header {
@@ -71,7 +82,7 @@ footer {
 .whatsapp_link {
   margin-bottom: 5px;
   margin-left: -3px;
-  color: #000;
+  color: #fce7ae;
 }
 
 .button_price,
@@ -226,7 +237,7 @@ iframe {
 }
 
 .home-price {
-  background-image: url('/image/modal.jpeg');
+  background-image: url("/image/modal.jpeg");
   background-size: 1200px;
 }
 

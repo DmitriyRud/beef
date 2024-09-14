@@ -1,25 +1,25 @@
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
 
 module.exports = function Catalog({ categories, email }) {
-  let descriptionStr = categories.map((el) => `✅${el.title}`).join(', ');
+  let descriptionStr = categories.map((el) => `✅${el.title}`).join(", ");
 
   while (descriptionStr.length > 150) {
-    const lastInd = descriptionStr.lastIndexOf(', ');
+    const lastInd = descriptionStr.lastIndexOf(", ");
     descriptionStr = descriptionStr.slice(0, lastInd);
   }
 
   const metaTags = {
-    title: 'Каталог вкусностей [ 🍵 соленья и салаты ]',
+    title: "Каталог вкусностей [ 🥩 Свежее качественное мясо ]",
     description: descriptionStr,
-    robots: 'index, follow',
+    robots: "index, follow",
   };
   return (
     <Layout categories={categories} email={email} metatags={metaTags}>
       <script defer src="/js/catalog.js" />
       <link rel="stylesheet" href="/css/style.css" />
       <link rel="stylesheet" href="/css/catalog.css" />
-      <link rel="canonical" href="https://soleniya.online/catalog" />
+      <link rel="canonical" href="https://premiumbeef.ru/catalog" />
       <div className="container">
         <div className="allItems-container container">
           {email && (
@@ -55,7 +55,7 @@ module.exports = function Catalog({ categories, email }) {
                         className="card-text"
                         id={`card-text-${category.id}`}
                       >
-                        {category.description.split('\n').map((line, index) => (
+                        {category.description.split("\n").map((line, index) => (
                           <p
                             className="text-center"
                             key={`${category.id}line${index}`}
@@ -101,10 +101,10 @@ module.exports = function Catalog({ categories, email }) {
                 {email && (
                   <div
                     className="hide_container_form"
-                    style={{ display: 'none', position: 'absolute' }}
+                    style={{ display: "none", position: "absolute" }}
                     id={`hide-form-${category.id}`}
                   >
-                    <p style={{ color: 'red' }} className="alert_items" />
+                    <p style={{ color: "red" }} className="alert_items" />
                     <form
                       id={`editCategory-${category.id}`}
                       encType="multipart/form-data"

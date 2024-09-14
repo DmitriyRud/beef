@@ -18,7 +18,7 @@
   width: 30%;
   height: 10%;
   opacity: 1;
-  top: 30%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -31,7 +31,7 @@
   justify-content: center;
 }
 .slide1-title h2 {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   font-size: 125px;
   color: #fff;
   font-weight: 1000;
@@ -39,7 +39,7 @@
 }
 
 .slide1-title p {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   font-size: 85px;
   color: #fff;
   text-shadow: 1px 1px 5px black;
@@ -54,7 +54,6 @@
   position: relative;
 }
 .slide2-container {
-  
   position: absolute;
   height: 10%;
   top: 25%;
@@ -70,7 +69,7 @@
 }
 
 .slide2-item {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   font-size: 65px;
   color: #fff;
   margin-left: 3rem;
@@ -100,7 +99,7 @@
   color: var(--color-form-text);
   border-radius: 6px;
   margin-bottom: 10rem;
-min-width: 20rem;
+  min-width: 20rem;
 }
 .price-form-title {
   margin-bottom: 30px;
@@ -172,28 +171,24 @@ min-width: 20rem;
   padding-bottom: 2rem;
 }
 
-
-
-
 @media (max-width: 900px) {
   .home-title-text {
     font-size: 28px;
-    
   }
 }
 
 @media (max-width: 678px) {
-  .slide1-title h2{
+  .slide1-title h2 {
     font-size: 50px;
     text-shadow: 1px 1px 2px black;
-   }
-   .slide1-title p{
+  }
+  .slide1-title p {
     font-size: 55px;
-   }
-   .image-slider{
+  }
+  .image-slider {
     width: 100%;
-   }
-   .home-title-text {
+  }
+  .home-title-text {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -201,17 +196,17 @@ min-width: 20rem;
   }
 }
 @media (max-width: 500px) {
-  .slide1-title h2{
+  .slide1-title h2 {
     font-size: 30px;
     text-shadow: 1px 1px 2px black;
-   }
-   .slide1-title p{
-    font-size: 30px;
-   }
-   .slide2-item{
+  }
+  .slide1-title p {
     font-size: 30px;
   }
-  .slide2-container{
+  .slide2-item {
+    font-size: 30px;
+  }
+  .slide2-container {
     flex-wrap: nowrap;
     align-items: center;
   }
@@ -221,7 +216,7 @@ min-width: 20rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
   }
-  .home-title-description{
+  .home-title-description {
     font-size: 12px;
   }
   .advantages-img img {
@@ -231,7 +226,7 @@ min-width: 20rem;
     margin-bottom: 0rem;
     height: 4rem;
   }
-  .advantages-title{
+  .advantages-title {
     font-size: 14px;
     margin-bottom: 0.5rem;
   }
@@ -243,7 +238,7 @@ min-width: 20rem;
   }
 }
 @media (max-width: 365px) {
-  .advantaged-descr{
+  .advantaged-descr {
     height: 5rem;
   }
 }

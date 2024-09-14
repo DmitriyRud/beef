@@ -1,17 +1,17 @@
-const React = require('react');
+const React = require("react");
 
-const Layout = require('./Layout');
+const Layout = require("./Layout");
 
 module.exports = function Feedback({ categories, feedbacks }) {
   const metaTags = {
-    title: 'Отзывы клиентов [ 📣Чиполинарий ]',
-    description: 'Что пишут о нашей компании и продукции наши 💕клиенты',
-    robots: 'index, follow',
+    title: "Отзывы клиентов [ 📣Premium Beef ]",
+    description: "Что пишут о нашей компании и продукции наши 💕клиенты",
+    robots: "index, follow",
   };
   return (
     <Layout categories={categories} metatags={metaTags}>
       <link rel="stylesheet" href="/css/feedback.css" />
-      <link rel="canonical" href="https://soleniya.online/feedback" />
+      <link rel="canonical" href="https://premiumbeef.ru/feedback" />
       <script defer src="/js/feedback.js" />
       <div className="main_feedback_container">
         <button
@@ -87,7 +87,7 @@ module.exports = function Feedback({ categories, feedbacks }) {
                   <h5 className="card-title">{feedback.name}</h5>
                   <p className="card-text">{feedback.body}</p>
                   <p className="card-text">
-                    {new Date(feedback.createdAt).toISOString().split('T')[0]}
+                    {new Date(feedback.createdAt).toISOString().split("T")[0]}
                   </p>
                 </div>
               </div>

@@ -1,12 +1,12 @@
-const React = require('react');
+const React = require("react");
 
-const Layout = require('./Layout');
+const Layout = require("./Layout");
 
 module.exports = function AccountPanel({ categories, feedbacks, managers }) {
   const metaTags = {
-    title: 'Кабинет администратора',
-    description: 'Настройка сайта: Только для сотрудников ООО Инмарко Плюс',
-    robots: 'noindex, nofollow',
+    title: "Кабинет администратора",
+    description: "Настройка сайта: Только для сотрудников ООО ПАН компани",
+    robots: "noindex, nofollow",
   };
   return (
     <Layout categories={categories} metatags={metaTags}>

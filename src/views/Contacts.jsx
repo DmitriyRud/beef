@@ -1,31 +1,26 @@
-const React = require('react');
+const React = require("react");
 
-const Layout = require('./Layout');
+const Layout = require("./Layout");
 
 module.exports = function Contacts({ categories }) {
   const metaTags = {
-    title: 'Контакты [ ООО "ИНМАРКО ПЛЮС" ]',
+    title: 'Контакты [ ООО "ПАН компани" ]',
     description:
-      'Информация о 🌎метонахождении, 📬способах связи и 🕑режиме работы компании',
-    robots: 'index, follow',
+      "Информация о 🌎метонахождении, 📬способах связи и 🕑режиме работы компании",
+    robots: "index, follow",
   };
   return (
     <Layout categories={categories} metatags={metaTags}>
       <link rel="stylesheet" href="/css/contacts.css" />
-      <link rel="canonical" href="https://soleniya.online/contacts" />
+      <link rel="canonical" href="https://premiumbeef.ru/contacts" />
       <div className="container contacts_container">
         <div className="contacts">
           <h2 className="titleCotn"> Контакты </h2>
           <p>
             <strong> ЮРИДИЧЕСКИЙ И ПОЧТОВЫЙ АДРЕС: </strong>
             <br />
-            105028,г.Москва, пл.Спартаковская, д.14, стр.3,помещение 9Н/2
-          </p>
-          <p>
-            <strong> ФАКТИЧЕСКИЙ АДРЕС: </strong>
-            <br />
-            140500 , Мос.обл. Луховицкий район, поселок Врачево Горки, ул.
-            Центральная, д.10
+            121596, Город Москва, вн.тер. г. Муниципальный Округ Можайский, ул
+            Горбунова, дом 2, строение 3, помещение 246
           </p>
           <p>
             <strong> Часы приема заказов: </strong> ежедневно 10:00-22:00
@@ -42,7 +37,7 @@ module.exports = function Contacts({ categories }) {
             <strong> Для писем: </strong>
           </p>
           <ul className="ul_contacts">
-            <li className="li_contacts"> INMARCOPLUS@MAIL.RU </li>
+            <li className="li_contacts"> il19abc@gmail.com </li>
           </ul>
         </div>
 
