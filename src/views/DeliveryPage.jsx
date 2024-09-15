@@ -9,7 +9,12 @@ module.exports = function Delivery({ categories, deliveries, email }) {
     robots: "index, follow",
   };
   return (
-    <Layout categories={categories} email={email} metatags={metaTags}>
+    <Layout
+      categories={categories}
+      email={email}
+      metatags={metaTags}
+      route="delivery"
+    >
       <script defer src="/js/delivery.js" />
       <link rel="stylesheet" href="/css/delivery.css" />
       <link rel="canonical" href="https://premiumbeef.ru/delivery" />
@@ -109,10 +114,7 @@ module.exports = function Delivery({ categories, deliveries, email }) {
                       </tr>
                     ))
                   ) : (
-                    <tr>
-                      {/* <td />
-                      <td /> */}
-                    </tr>
+                    <tr></tr>
                   )}
                 </tbody>
               ) : (

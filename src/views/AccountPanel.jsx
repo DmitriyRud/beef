@@ -9,7 +9,7 @@ module.exports = function AccountPanel({ categories, feedbacks, managers }) {
     robots: "noindex, nofollow",
   };
   return (
-    <Layout categories={categories} metatags={metaTags}>
+    <Layout categories={categories} metatags={metaTags} route="account">
       <link rel="stylesheet" href="/css/account.css" />
       <script defer src="/js/accountPanel.js" />
       <script defer src="/js/managerEmail.js" />

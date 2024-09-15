@@ -26,7 +26,12 @@ module.exports = function Items({ categories, email, items, category_id }) {
     robots: "index, follow",
   };
   return (
-    <Layout categories={categories} email={email} metatags={metaTags}>
+    <Layout
+      categories={categories}
+      email={email}
+      metatags={metaTags}
+      route="items"
+    >
       <link rel="stylesheet" href="/css/catalog.css" />
       <link rel="stylesheet" href="/css/home.css" />
       <script defer src="/js/item.js" />

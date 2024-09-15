@@ -1,5 +1,6 @@
 .about-container {
   padding: 3rem;
+  max-width: 1145px;
 }
 .about-title {
   margin-bottom: 2rem;

@@ -9,7 +9,7 @@ module.exports = function Feedback({ categories, feedbacks }) {
     robots: "index, follow",
   };
   return (
-    <Layout categories={categories} metatags={metaTags}>
+    <Layout categories={categories} metatags={metaTags} route="feedback">
       <link rel="stylesheet" href="/css/feedback.css" />
       <link rel="canonical" href="https://premiumbeef.ru/feedback" />
       <script defer src="/js/feedback.js" />

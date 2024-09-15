@@ -9,7 +9,7 @@ module.exports = function Login({ categories }) {
     robots: "noindex, nofollow",
   };
   return (
-    <Layout categories={categories} metatags={metaTags}>
+    <Layout categories={categories} metatags={metaTags} route="admin">
       <script defer src="/js/adminPanel.js" />
       <div className="login_container">
         <form id="logForm" name="logName">

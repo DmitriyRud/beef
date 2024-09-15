@@ -1,15 +1,15 @@
-const contactsRouter = require('express').Router();
+const contactsRouter = require("express").Router();
 
-const renderTemplate = require('../lib/renderTemplate');
+const renderTemplate = require("../lib/renderTemplate");
 
-const Contacts = require('../views/Contacts');
-const { Category } = require('../../db/models');
+const Contacts = require("../views/Contacts");
+const { Category } = require("../../db/models");
 
-contactsRouter.get('/', async(req, res) => {
+contactsRouter.get("/", async (req, res) => {
   const categories = await Category.findAll({
     raw: true,
   });
-  renderTemplate(Contacts, {categories }, res);
+  renderTemplate(Contacts, { categories }, res, true);
 });
 
 module.exports = contactsRouter;

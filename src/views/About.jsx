@@ -9,7 +9,7 @@ module.exports = function About({ categories }) {
     robots: "index, follow",
   };
   return (
-    <Layout categories={categories} metatags={metaTags}>
+    <Layout categories={categories} metatags={metaTags} route="about">
       <link rel="stylesheet" href="/css/about.css" />
       <link rel="canonical" href="https://soleniya.online/about" />
       <div className="container about-container">

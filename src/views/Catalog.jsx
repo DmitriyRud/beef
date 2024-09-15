@@ -15,7 +15,12 @@ module.exports = function Catalog({ categories, email }) {
     robots: "index, follow",
   };
   return (
-    <Layout categories={categories} email={email} metatags={metaTags}>
+    <Layout
+      categories={categories}
+      email={email}
+      metatags={metaTags}
+      route="catalog"
+    >
       <script defer src="/js/catalog.js" />
       <link rel="stylesheet" href="/css/style.css" />
       <link rel="stylesheet" href="/css/catalog.css" />

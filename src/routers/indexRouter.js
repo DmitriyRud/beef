@@ -1,13 +1,13 @@
-const router = require('express').Router();
-const renderTemplate = require('../lib/renderTemplate');
-const Home = require('../views/Home');
+const router = require("express").Router();
+const renderTemplate = require("../lib/renderTemplate");
+const Home = require("../views/Home");
 
-const { Category } = require('../../db/models');
+const { Category } = require("../../db/models");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const categories = await Category.findAll({ raw: true });
-    renderTemplate(Home, { categories }, res);
+    renderTemplate(Home, { categories }, res, true);
   } catch (err) {
     console.error(err);
   }

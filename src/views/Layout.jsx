@@ -9,11 +9,11 @@ module.exports = function Layout({
       "Производство и снабжение свежим качественным мясом магазинов, ресторанов, кафе, гостиниц, столовых, баров, комбинатов питания",
     robots: "index, follow",
   },
+  route = "home",
 }) {
   return (
     <html lang="ru">
       <head>
-        <script src="google" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{metatags.title}</title>
@@ -22,7 +22,11 @@ module.exports = function Layout({
         <meta name="rating" content="safe for kids" />
         <meta name="author" content="Dmitriy Rudakov" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
           rel="stylesheet"
@@ -41,11 +45,7 @@ module.exports = function Layout({
           integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
           crossOrigin="anonymous"
         />
-        <link
-          rel="icon"
-          href="https://soleniya.online/favicon.ico"
-          type="image/x-icon"
-        />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -65,7 +65,8 @@ module.exports = function Layout({
         />
 
         <link rel="manifest" href="/site.webmanifest" />
-        <script src="yandex" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=f9adcdb7-3c21-4b8b-9ded-d12b4e64f140&lang=ru_RU" />
+        <script src="yandexmap" />
         <script defer src="/js/modalHeader.js" />
       </head>
       <body>
@@ -98,11 +99,11 @@ module.exports = function Layout({
                   +7(985)4723376
                 </a>
                 <a
-                  href="mailto: &#x69;&#x6e;&#x6d;&#x61;&#x72;&#x63;&#x6f;&#x70;&#x6c;&#x75;&#x73;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x72;&#x75;"
                   className="contact_header__text"
+                  href="mailto:&#112;&#097;&#110;&#046;&#099;&#111;&#109;&#050;&#048;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
                 >
                   ✉️
-                  &#x69;&#x6e;&#x6d;&#x61;&#x72;&#x63;&#x6f;&#x70;&#x6c;&#x75;&#x73;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x72;&#x75;
+                  &#112;&#097;&#110;&#046;&#099;&#111;&#109;&#050;&#048;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
                 </a>
                 <button type="button" className=" btn button_price">
                   Подробности
@@ -128,35 +129,52 @@ module.exports = function Layout({
                     id="navbarNav"
                   >
                     <ul className="navbar-nav">
-                      <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          aria-current="page"
-                          href="/about"
-                        >
-                          О нас
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/catalog">
-                          Каталог
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/delivery">
-                          Доставка
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/contacts">
-                          Контакты
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/feedback">
-                          Отзывы
-                        </a>
-                      </li>
+                      {route !== "home" && (
+                        <li className="nav-item">
+                          <a className="nav-link" aria-current="page" href="/">
+                            Главная
+                          </a>
+                        </li>
+                      )}
+                      {route !== "about" && (
+                        <li className="nav-item">
+                          <a
+                            className="nav-link"
+                            aria-current="page"
+                            href="/about"
+                          >
+                            О нас
+                          </a>
+                        </li>
+                      )}
+                      {route !== "catalog" && (
+                        <li className="nav-item">
+                          <a className="nav-link" href="/catalog">
+                            Каталог
+                          </a>
+                        </li>
+                      )}
+                      {route !== "delivery" && (
+                        <li className="nav-item">
+                          <a className="nav-link" href="/delivery">
+                            Доставка
+                          </a>
+                        </li>
+                      )}
+                      {route !== "contacts" && (
+                        <li className="nav-item">
+                          <a className="nav-link" href="/contacts">
+                            Контакты
+                          </a>
+                        </li>
+                      )}
+                      {route !== "feedback" && (
+                        <li className="nav-item">
+                          <a className="nav-link" href="/feedback">
+                            Отзывы
+                          </a>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -235,11 +253,6 @@ module.exports = function Layout({
                   <a href="/delivery">
                     <li className="supplies_item">Доставка продуктов</li>
                   </a>
-
-                  <a href="/prices">
-                    <li className="supplies_item">Цены</li>
-                  </a>
-
                   <a href="/about">
                     <li className="supplies_item">О нас</li>
                   </a>
@@ -268,9 +281,6 @@ module.exports = function Layout({
               <div className="info_container">
                 <div className="sales_department">
                   <h4 className="footer-title">Отдел продаж:</h4>
-                  <a href="tel:+74957951054" className="phone_link">
-                    <p className="contact_header__text">📞 +7(495)7951054</p>
-                  </a>
                   <a href="tel:+79854723376" className="phone_link">
                     <p className="contact_header__text">📞 +7(985)4723376</p>
                   </a>
@@ -282,11 +292,11 @@ module.exports = function Layout({
                 <div className="email_contact">
                   <h4 className="footer-title">Пишите нам:</h4>
                   <a
-                    href="mailto: &#x69;&#x6e;&#x6d;&#x61;&#x72;&#x63;&#x6f;&#x70;&#x6c;&#x75;&#x73;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x72;&#x75;"
                     className="contact_header__text"
+                    href="mailto:&#112;&#097;&#110;&#046;&#099;&#111;&#109;&#050;&#048;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
                   >
                     ✉️
-                    &#x69;&#x6e;&#x6d;&#x61;&#x72;&#x63;&#x6f;&#x70;&#x6c;&#x75;&#x73;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x72;&#x75;
+                    &#112;&#097;&#110;&#046;&#099;&#111;&#109;&#050;&#048;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
                   </a>
                 </div>
               </div>

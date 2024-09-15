@@ -9,7 +9,7 @@ module.exports = function Home({ categories }) {
     robots: "index, follow",
   };
   return (
-    <Layout categories={categories} metatags={metaTags}>
+    <Layout categories={categories} metatags={metaTags} route="home">
       <script defer src="/js/requestPriceHome.js" />
       <link rel="canonical" href="https://premiumbeef.ru/" />
       <link
@@ -19,7 +19,11 @@ module.exports = function Home({ categories }) {
       <link rel="stylesheet" href="/css/home.css" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
         rel="stylesheet"
@@ -39,7 +43,10 @@ module.exports = function Home({ categories }) {
                 </div>
               </div>
               <div className="image-slider">
-                <img src="/image/slider/slider-1.jpg" alt="salats" />
+                <img
+                  src="/image/slider/slider-1.jpg"
+                  alt="Premium beef image"
+                />
               </div>
             </div>
             <div className="swiper-slide slide2">
@@ -49,12 +56,21 @@ module.exports = function Home({ categories }) {
                 <div className="slide2-item">Удобно</div>
               </div>
               <div className="image-slider">
-                <img src="/image/slider/slider-2.jpg" alt="salats2" />
+                <img
+                  src="/image/slider/slider-2.jpg"
+                  alt="Premium beef image 2"
+                />
               </div>
             </div>
-            <div className="swiper-slide">
+            <div className="swiper-slide slide2">
+              <div className="slide2-container">
+                <div className="slide2-item">Без "накачки"</div>
+              </div>
               <div className="image-slider">
-                <img src="/image/slider/slider-3.jpg" alt="salats3" />
+                <img
+                  src="/image/slider/slider-3.jpg"
+                  alt="Premium beef image 3"
+                />
               </div>
             </div>
           </div>
@@ -151,14 +167,7 @@ module.exports = function Home({ categories }) {
               </div>
             </div>
           </div>
-          <div id="map" className="map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=39.711247%2C54.959259&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgozNjUzODI5ODI0EqwB0KDQvtGB0YHQuNGPLCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0LPQvtGA0L7QtNGB0LrQvtC5INC-0LrRgNGD0LMg0JvRg9GF0L7QstC40YbRiywg0YHQtdC70L4g0J3QuNC20L3QtS3QnNCw0YHQu9C-0LLQviwg0JzQvtC70L7QtNGR0LbQvdCw0Y8g0YPQu9C40YbQsCwgMTHQkCIKDWZ5HUIVVVVbQg%2C%2C&z=8.97"
-              frameBorder="1"
-              allowFullScreen="true"
-              title="YandexMap"
-            />
-          </div>
+          <div id="map" className="map"></div>
         </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" />

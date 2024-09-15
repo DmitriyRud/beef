@@ -1,18 +1,18 @@
-const React = require('react');
-const Layout = require('./Layout');
+const React = require("react");
+const Layout = require("./Layout");
 
 module.exports = function PriceList({ categories, email, prices, items }) {
   const metaTags = {
-    title: 'Прайс-лист солений и салатов [ Чиполинарий ]',
-    description: 'Актуальные цены на продукцию ООО Инмарко Плюс',
-    robots: 'index, follow',
+    title: "Прайс-лист солений и салатов [ Чиполинарий ]",
+    description: "Актуальные цены на продукцию ООО Инмарко Плюс",
+    robots: "index, follow",
   };
 
   function displayPrice(price) {
     if (price) {
       return price.toFixed(2);
     }
-    return '';
+    return "";
   }
 
   const categoriesArr = categories.map((cat) => ({
@@ -28,7 +28,7 @@ module.exports = function PriceList({ categories, email, prices, items }) {
   }));
 
   return (
-    <Layout categories={categories} metatags={metaTags}>
+    <Layout categories={categories} metatags={metaTags} route="pricelist">
       <link rel="stylesheet" href="/css/pricelist.css" />
       <link rel="canonical" href="https://soleniya.online/prices" />
       <script defer src="/js/priceList.js" />
@@ -75,7 +75,7 @@ module.exports = function PriceList({ categories, email, prices, items }) {
                 <td>10</td>
               </tr>
               {prices
-                .filter((e) => e['Item.category_id'] === category.id)
+                .filter((e) => e["Item.category_id"] === category.id)
                 .map((price, index) => (
                   <tr key={`item-${price.item_id}`} className="content-tr">
                     {email ? (
@@ -88,7 +88,7 @@ module.exports = function PriceList({ categories, email, prices, items }) {
                       <td>{index + 1}</td>
                     )}
 
-                    <td>{price['Item.name']}</td>
+                    <td>{price["Item.name"]}</td>
                     <td>
                       {email ? (
                         <input
