@@ -285,7 +285,7 @@ module.exports = function Layout({
                     <p className="contact_header__text">📞 +7(985)4723376</p>
                   </a>
                   <a href="https://wa.me/79854723376" className="whatsapp_link">
-                    <img src="/image/whatsapp24.png" alt="whatsapp" />
+                    <img src="/image/whatsapp24.png" alt="whatsapp" />{" "}
                     +7(985)4723376
                   </a>
                 </div>
