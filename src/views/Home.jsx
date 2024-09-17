@@ -64,9 +64,8 @@ module.exports = function Home({ categories }) {
             </div>
             <div className="swiper-slide slide2">
               <div className="slide2-container">
-                <div className="slide2-item">
-                  100% качество от производителя
-                </div>
+                <div className="slide2-item">100% качество</div>
+                <div className="slide2-item">от производителя</div>
               </div>
               <div className="image-slider">
                 <img
