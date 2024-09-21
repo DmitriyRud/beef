@@ -13,13 +13,13 @@ module.exports = function About({ categories }) {
       <link rel="stylesheet" href="/css/about.css" />
       <link rel="canonical" href="https://soleniya.online/about" />
       <div className="container about-container">
-        <h2 className="about-title">О компании ПАН компани</h2>
+        <h2 className="about-title">О нас</h2>
         <p className="about-text">
-          Мы рады представить вам нашу компанию, специализирующуюся на
-          производстве и продаже высококачественного мяса и мясопродуктов на
-          заводе, расположенном в Республике Беларусь. Именно поэтому
-          производство исключает вредные добавки, которые попросту не нужны для
-          исключительного качества продукции.
+          Мы рады представить вам нашу компанию ООО "ПАН компани",
+          специализирующуюся на производстве и продаже высококачественного мяса
+          и мясопродуктов на заводе, расположенном в Республике Беларусь. Именно
+          поэтому производство исключает вредные добавки, которые попросту не
+          нужны для исключительного качества продукции.
         </p>
         <div className="item">
           <h3>Уникальное качество нашей компании</h3>
@@ -42,7 +42,6 @@ module.exports = function About({ categories }) {
           </div>
         </div>
         <div className="item">
-          <h3>Контроль качества производства</h3>
           <div className="item-inner">
             <div className="item__img2">
               <img
@@ -52,6 +51,7 @@ module.exports = function About({ categories }) {
               />
             </div>
             <div className="item-inner-text">
+              <h3>Контроль качества производства</h3>
               <p className="inner-text">
                 Мы работаем только с проверенными поставщиками, которые
                 доставляют нам качественное свежее мясо. Весь процесс

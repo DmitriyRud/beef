@@ -60,7 +60,7 @@ const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = yma
             );
             const markerElement = document.createElement('img');
             markerElement.className = 'icon-marker';
-            markerElement.src = 'https://premiumbeef.ru/image/logo2.jpg'
+            markerElement.src = 'https://premiumbeef.ru/image/map_placeholder.png'
             map.addChild(new YMapMarker({coordinates: [37.399399, 55.726320]}, markerElement));            
             map.addChild(new YMapDefaultSchemeLayer());
         }

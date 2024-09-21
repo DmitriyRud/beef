@@ -5,3 +5,4 @@ SESSION_SECRET=***
 COOKIE_NAME=***
 EMAIL=************@***.com
 PASSWORD=***********
+YANDEX_MAP_KEY=************
