@@ -10,6 +10,7 @@
   padding: 2rem 0 0 3rem;
   justify-content: space-around;
   margin-left: 1rem;
+  margin-top: 3rem;
   flex-wrap: wrap;
 }
 
@@ -31,7 +32,6 @@
 @media (max-width: 1340px) {
   .contacts {
     margin-right: 0;
-    ;
   }
 }
 
@@ -71,7 +71,6 @@
   .map {
     width: 22rem;
     margin-right: 4rem;
-
   }
 }
 

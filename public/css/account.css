@@ -97,11 +97,17 @@ button {
   align-items: flex-start;
   margin-left: 1rem;
 }
+.btn-close {
+  color: #000;
+  background-color: #f39b8f;
+  margin-left: 3rem;
+}
+
 .updateAdmin-btn,
 .send-update-btn,
 .close-update-btn {
-  color: var(--color-button);
-  background-color: var(--color-dark-green);
+  color: #000;
+  background-color: var(--color-button);
   width: 47%;
   /* margin-right: 2rem; */
 }
@@ -201,9 +207,9 @@ button {
   .Manager_container {
     margin: 0rem;
   }
-.update-container{
-  margin: 0;
-}
+  .update-container {
+    margin: 0;
+  }
   .category_create_container,
   .create_item_container {
     width: 100%;
@@ -212,8 +218,9 @@ button {
   .Manager_container {
     width: 120%;
   }
-  .Manager_container{
-    margin-left: 1rem;}
+  .Manager_container {
+    margin-left: 1rem;
+  }
   .update-form {
     width: 100%;
   }

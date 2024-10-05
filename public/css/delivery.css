@@ -8,7 +8,6 @@
 
 .table {
   margin: 2rem 0;
-  
 }
 tr,
 td,
@@ -21,7 +20,7 @@ th {
   color: white;
   margin-right: 1rem;
 }
-.usual-btn:hover{
+.usual-btn:hover {
   background-color: var(--color-chipollino);
   color: black;
 }
@@ -29,9 +28,10 @@ th {
 .delivery-container {
   padding: 3rem;
   border-bottom: 1px solid var(--color-dark-green);
+  margin-top: 4rem;
 }
 
-.text-container{
+.text-container {
   margin-right: 0.5rem;
 }
 .delivery-image__img {
@@ -56,24 +56,24 @@ th {
   .delivery-image__img {
     display: none;
   }
-  .delivery-container{
+  .delivery-container {
     font-size: 18px;
   }
-  .text-container{
+  .text-container {
     margin-right: 0;
   }
 }
 @media (max-width: 500px) {
-  .delivery-title{
+  .delivery-title {
     font-size: 20px;
   }
   .delivery-title {
     margin-bottom: 0.5rem;
   }
-  .delivery-container{
+  .delivery-container {
     font-size: 16px;
   }
-  .usual-btn{
+  .usual-btn {
     font-size: 12px;
   }
 }

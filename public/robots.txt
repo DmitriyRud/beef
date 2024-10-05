@@ -19,4 +19,4 @@ Disallow: /?q=accountPanel/
 Disallow: /scripts/
 Disallow: /README.md
 
-Sitemap: https://soleniya.online/sitemap.xml
+Sitemap: https://premiumbeef.ru/sitemap.xml
