@@ -67,6 +67,7 @@ module.exports = function Layout({
         <link rel="manifest" href="/site.webmanifest" />
         <script src="https://api-maps.yandex.ru/v3/?apikey=f9adcdb7-3c21-4b8b-9ded-d12b4e64f140&lang=ru_RU" />
         <script src="yandexmap" />
+        <script src="yandexmetrika" />
         <script defer src="/js/modalHeader.js" />
       </head>
       <body>
