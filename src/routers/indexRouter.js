@@ -7,7 +7,7 @@ const { Category } = require("../../db/models");
 router.get("/", async (req, res) => {
   try {
     const categories = await Category.findAll({ raw: true });
-    renderTemplate(Home, { categories }, res, true);
+    renderTemplate(Home, { categories }, res, true, true);
   } catch (err) {
     console.error(err);
   }

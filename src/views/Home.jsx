@@ -97,7 +97,7 @@ module.exports = function Home({ categories }) {
                 необходимую информацию
                 <p className="price_form_alert_home" />
               </div>
-              <form className="formRequestPriceHome">
+              <form id="feedBackForm" className="formRequestPriceHome">
                 <div className="mb-3">
                   <input
                     className="form-price__input form-control"
@@ -120,7 +120,13 @@ module.exports = function Home({ categories }) {
                     placeholder="Введите Ваш email"
                   />
                 </div>
-                <button className="price-btn btn" type="submit">
+                <button
+                  className="price-btn btn g-recaptcha"
+                  data-sitekey="reCAPTCHA_site_key"
+                  data-callback="onSubmit"
+                  data-action="submit"
+                  type="submit"
+                >
                   Отправить
                 </button>
                 <p className="message" />
