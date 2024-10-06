@@ -122,7 +122,7 @@ module.exports = function Home({ categories }) {
                 </div>
                 <button
                   className="price-btn btn g-recaptcha"
-                  data-sitekey="reCAPTCHA_site_key"
+                  data-sitekey="6LdlblkqAAAAACdE7prWyoCR3lficPP1hRL_CeKD"
                   data-callback="onSubmit"
                   data-action="submit"
                   type="submit"
