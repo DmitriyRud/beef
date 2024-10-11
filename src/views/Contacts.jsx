@@ -25,6 +25,13 @@ module.exports = function Contacts({ categories }) {
             121596, Город Москва, вн.тер. г. Муниципальный Округ Можайский, ул
             Горбунова, дом 2, строение 3, помещение 246
           </p>
+          <br />
+          <p>
+            <strong> ФАКТИЧЕСКИЙ АДРЕС: </strong>
+            <br />
+            Коровинское шоссе, дом 35 строение 4
+          </p>
+          <br />
           <p>
             <strong> Часы приема заказов: </strong> ежедневно 10:00-22:00
           </p>
@@ -40,7 +47,9 @@ module.exports = function Contacts({ categories }) {
             <strong> Для писем: </strong>
           </p>
           <ul className="ul_contacts">
-            <li className="li_contacts"> il19abc@gmail.com </li>
+            <li className="li_contacts">
+              &#112;&#097;&#110;&#046;&#099;&#111;&#109;&#050;&#048;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
+            </li>
           </ul>
         </div>
 
