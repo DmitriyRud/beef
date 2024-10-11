@@ -3,7 +3,7 @@ require("@babel/register");
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
 
-function renderTemplate(component, props, res, map = false, captcha = false) {
+function renderTemplate(component, props, res, map = false) {
   const yandexMetrikaScript = `
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -23,16 +23,8 @@ function renderTemplate(component, props, res, map = false, captcha = false) {
 <noscript><div><img src="https://mc.yandex.ru/watch/98555160" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->`;
 
-  const googleCaptcha = `<script defer>
-        function onSubmit(token) {document.getElementById("feedBackForm").submit()}
-      </script>`;
-
   const reactEl = React.createElement(component, props);
   const html = ReactDOMServer.renderToStaticMarkup(reactEl);
-  const htmlCaptcha = captcha
-    ? html.replace('<script src="googlecaptcha"></script>', googleCaptcha)
-    : html;
-
   if (map) {
     const yandexMapScript = `<script defer>
         initMap();
@@ -63,13 +55,13 @@ const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = yma
             map.addChild(new YMapDefaultSchemeLayer());
         }
     </script>`;
-    const finalHtml = htmlCaptcha
+    const finalHtml = html
       .replace('<script src="yandexmap"></script>', yandexMapScript)
       .replace('<script src="yandexmetrika"></script>', yandexMetrikaScript);
     res.send(`<!DOCTYPE html>${finalHtml}`);
     //   .replace('<script src="google"></script>', googleAnaliticsScript);
   } else {
-    const finalHtml = htmlCaptcha
+    const finalHtml = html
       .replace('<script src="yandexmap"></script>', "")
       .replace('<script src="yandexmetrika"></script>', yandexMetrikaScript);
     res.send(`<!DOCTYPE html>${finalHtml}`);

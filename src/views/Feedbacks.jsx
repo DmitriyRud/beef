@@ -68,15 +68,8 @@ module.exports = function Feedback({ categories, feedbacks }) {
                 rows="10"
               />
             </div>
-            <div className="div_buttons_feedback g-recaptcha">
-              <button
-                id="1"
-                type="submit"
-                className="btn sendFormBtn"
-                data-sitekey="6LdlblkqAAAAACdE7prWyoCR3lficPP1hRL_CeKD"
-                data-callback="onSubmit"
-                data-action="submit"
-              >
+            <div className="div_buttons_feedback">
+              <button id="1" type="submit" className="btn sendFormBtn">
                 Отправить
               </button>
               <button type="submit" className="btn closeFormBtn">

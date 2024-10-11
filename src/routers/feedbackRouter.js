@@ -13,7 +13,7 @@ feedBackRouter.get("/", async (req, res) => {
       { raw: true }
     );
     const categories = await Category.findAll({ raw: true });
-    renderTemplate(Feedbacks, { categories, feedbacks }, res, false, true);
+    renderTemplate(Feedbacks, { categories, feedbacks }, res);
   } catch (err) {
     console.error(err);
   }
