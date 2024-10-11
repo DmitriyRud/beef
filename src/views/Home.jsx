@@ -97,7 +97,7 @@ module.exports = function Home({ categories }) {
                 необходимую информацию
                 <p className="price_form_alert_home" />
               </div>
-              <form className="formRequestPriceHome">
+              <form className="formRequestPriceHome" method="POST">
                 <div className="mb-3">
                   <input
                     className="form-price__input form-control"
