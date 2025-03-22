@@ -155,13 +155,11 @@ module.exports = function Layout({
                           </a>
                         </li>
                       )}
-                      {route !== "prices" && (
                         <li className="nav-item">
                           <a className="nav-link" href="https://premiumbeef.ru/prices/price_list.xlsx">
                             Наши цены
                           </a>
                         </li>
-                      )}
                       {route !== "delivery" && (
                         <li className="nav-item">
                           <a className="nav-link" href="/delivery">
